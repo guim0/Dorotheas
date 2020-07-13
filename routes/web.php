@@ -21,8 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'IndexController@index')->name('site.home');
 
-Route::get('/students', 'StudentController@index')->name('site.students');
+Route::get('/student', 'StudentController@index')->name('site.student');
 
-Route::get('/teachers', 'TeacherController@index')->name('site.teachers');
+Route::get('/teacher', 'TeacherController@index')->name('site.teachers');
 
-Route::get('/courses', 'CoursesController@index')->name('site.courses');
+Route::get('/course', 'CourseController@index')->name('site.courses');
