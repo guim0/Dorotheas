@@ -13,8 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController@index');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Routes
+
+Route::get('/', 'IndexController@index')->name('site.home');
+
+Route::get('/student', 'StudentController@index')->name('site.student');
+
+Route::get('/teacher', 'TeacherController@index')->name('site.teachers');
+
+Route::get('/course', 'CourseController@index')->name('site.courses');
