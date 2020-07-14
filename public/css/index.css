@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(90deg, #2c27c3 50%, #c8c8c8 50%);
+}
+
+.content .main-card .card-left h1 {
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+    font-size: 5em;
+}
+
+.content {
+    height: 100%;
+}
+
+.content .main-card .card-left p {
+    font-size: 2em;
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+}
+
+.content .main-card {
+    background: linear-gradient(90deg, #3a36c3 50%, #ABAAAA 50%);
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+.content .main-card .card-left {
+    width: 50%;
+    max-width: 50vw;
+}
+
+.content .main-card .card-right {
+    width: 50%;
+    max-width: 50vw;
+}
+
+.content .main-card .card-right .card-login {
+    width: 20vw;
+    height: 30vh;
+    background: #3E3B60;
+    border-radius: 20px;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.content .main-card .card-right .card-login h1 {
+    font-size: 2em;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    padding: 1rem 0 0 2rem;
+}
+
+.content .main-card .card-right .card-login .form-login {
+    width: 20vw;
+    height: 30vh;
+    background: #1A1830;
+    border-radius: 30px 30px 20px 20px;
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.25);
+}
