@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -10926,5 +10926,117 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(90deg, #2c27c3 50%, #c8c8c8 50%);
+}
+
+.mysite_main {
+  height: 100%;
+}
+
+.mysite_main .mysite_main-card-main {
+  height: 70vh;
+  width: 80vw;
+  background: linear-gradient(90deg, #3a36c3 50%, #ABAAAA 50%);
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-left {
+  width: 50%;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-left h1 {
+  color: #fff;
+  font-family: "Fredoka One", cursive;
+  font-size: 6em;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-left hr {
+  background-color: #fff;
+  padding: 0.4em 20em;
+  margin: 0 0 1em 0;
+  border: 0;
+  border-radius: 20px;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-left p {
+  color: #fff;
+  font-family: "Pacifico", cursive;
+  font-size: 2em;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-right {
+  width: 50%;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-right .mysite_main-card-login {
+  width: 20vw;
+  height: 30vh;
+  background: #3E3B60;
+  border-radius: 20px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-right .mysite_main-card-login h1 {
+  color: #fff;
+  font-size: 2.3em;
+  font-family: "Fredoka One", cursive;
+  margin: 0.4em 0 0.4em 1em;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-right .mysite_main-form-login {
+  width: 20vw;
+  height: 30vh;
+  background: #1A1830;
+  border-radius: 30px 30px 20px 20px;
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-right .mysite_main-form-login form {
+  width: 100%;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-right .mysite_main-form-login form input {
+  width: 15vw;
+  padding: 2em 0 0 0;
+  font-size: 1.3em;
+  font-family: "Fredoka One", cursive;
+  color: #fff;
+  margin: 0.5em 0 0.2em 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid #fff;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-right .mysite_main-form-login form input:focus {
+  outline: 0;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-right .mysite_main-form-login form input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.57);
+  font-size: 1.3em;
+}
+
+.mysite_main .mysite_main-card-main .mysite_main-card-right .mysite_main-form-login form .mysite_main-btn {
+  border: none;
+  background: #2D27FF;
+  padding: 0.2em 2em;
+  margin: 1em 0 0 0;
+  border-radius: 10px;
+  font-size: 2em;
+  color: #fff;
+  font-family: "Fredoka One", cursive;
 }
 
