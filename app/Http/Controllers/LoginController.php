@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-class IndexController
+class LoginController
 {
     public function index()
     {
-        return view('index');
+        return view('login.index');
     }
 }
