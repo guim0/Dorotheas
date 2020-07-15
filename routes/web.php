@@ -15,14 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/index', 'HomeController@index')->name('home');
+//Route::get('/login', 'HomeController@login')->name('home');
 
 // Routes
 
-Route::get('/', 'IndexController@index')->name('site.home');
+Route::get('/login', 'LoginController@index')->name('site.login');
 
-Route::get('/student', 'StudentController@index')->name('site.student');
+Route::get('/home', 'HomeController@index')->name('site.home');
 
-Route::get('/teacher', 'TeacherController@index')->name('site.teachers');
+Route::get('/students', 'StudentController@index')->name('site.students');
 
-Route::get('/course', 'CourseController@index')->name('site.courses');
+Route::get('/teachers', 'TeacherController@index')->name('site.teachers');
+
+Route::get('/courses', 'CourseController@index')->name('site.courses');
