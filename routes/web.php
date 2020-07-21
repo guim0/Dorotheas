@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/login', 'LoginController@index')->name('site.login');
 
-Route::get('/home', 'HomeController@index')->name('site.home');
+Route::get('/', 'HomeController@index')->name('site.home');
 
 Route::get('/students', 'StudentController@index')->name('site.students');
 

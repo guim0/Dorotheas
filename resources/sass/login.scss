@@ -5,17 +5,14 @@ html, body {
     padding: 0;
 }
 
-body {
-    background-image: linear-gradient(90deg, #2c27c3 50%, #c8c8c8 50%);
-}
-
 .mysite_main {
     height: 100%;
+    background-image: linear-gradient(90deg, $blueMain 50%, $greyMain 50%);
 
     .mysite_main-card-main {
         height: 70vh;
         width: 80vw;
-        background: linear-gradient(90deg, #3a36c3 50%, #ABAAAA 50%);
+        background: linear-gradient(90deg, $blueCard 50%, $greyCard 50%);
         box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
         border-radius: 20px;
 
@@ -23,13 +20,13 @@ body {
             width: 50%;
 
             h1 {
-                color: #fff;
+                color: $white;
                 font-family: 'Fredoka One', cursive;
                 font-size: 6em;
             }
 
             hr {
-                background-color: #fff;
+                background-color: $white;
                 padding: .4em 20em;
                 margin: 0 0 1em 0;
                 border: 0;
@@ -37,7 +34,7 @@ body {
             }
 
             p {
-                color: #fff;
+                color: $white;
                 font-family: 'Pacifico', cursive;
                 font-size: 2em;
             }
@@ -49,12 +46,12 @@ body {
             .mysite_main-card-login {
                 width: 20vw;
                 height: 30vh;
-                background: #3E3B60;
+                background: $blueCardLogin_1;
                 border-radius: 20px;
                 box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
 
                 h1 {
-                    color: #fff;
+                    color: $white;
                     font-size: 2.3em;
                     font-family: 'Fredoka One', cursive;
                     margin: .4em 0 .4em 1em;
@@ -64,7 +61,7 @@ body {
             .mysite_main-form-login {
                 width: 20vw;
                 height: 30vh;
-                background: #1A1830;
+                background: $blueCardLogin_2;
                 border-radius: 30px 30px 20px 20px;
                 box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.25);
 
@@ -76,12 +73,12 @@ body {
                         padding: 2em 0 0 0;
                         font-size: 1.3em;
                         font-family: 'Fredoka One', cursive;
-                        color: #fff;
+                        color: $white;
                         margin: .5em 0 .2em 0;
                         background: transparent;
                         border: none;
                         box-shadow: none;
-                        border-bottom: 2px solid #fff;
+                        border-bottom: 2px solid $white;
                     }
 
                     input:focus {
@@ -95,12 +92,12 @@ body {
 
                     .mysite_main-btn {
                         border:none;
-                        background: #2D27FF;
+                        background: $blueBtn;
                         padding: .2em 2em;
                         margin: 1em 0 0 0;
                         border-radius: 10px;
                         font-size: 2em;
-                        color: #fff;
+                        color: $white;
                         font-family: 'Fredoka One', cursive;
                     }
                 }

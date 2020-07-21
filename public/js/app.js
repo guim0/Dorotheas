@@ -88,7 +88,7 @@
 
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
-  !*** ./node_modules/axios/login.js ***!
+  !*** ./node_modules/axios/index.js ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1759,7 +1759,7 @@ function isStandardBrowserEnv() {
  * Iterate over an Array or an Object invoking a function for each item.
  *
  * If `obj` is an Array callback will be called passing
- * the value, login, and complete array for each item.
+ * the value, index, and complete array for each item.
  *
  * If 'obj' is an Object callback will be called passing
  * the value, key, and complete object for each property.
@@ -8180,7 +8180,7 @@ Expr = Sizzle.selectors = {
 				// advance to the next closing parenthesis
 				( excess = unquoted.indexOf( ")", unquoted.length - excess ) - unquoted.length ) ) {
 
-				// excess is a negative login
+				// excess is a negative index
 				match[ 0 ] = match[ 0 ].slice( 0, excess );
 				match[ 2 ] = unquoted.slice( 0, excess );
 			}
@@ -8293,7 +8293,7 @@ Expr = Sizzle.selectors = {
 						// non-xml :nth-child(...) stores cache data on `parent`
 						if ( forward && useCache ) {
 
-							// Seek `elem` from a previously-cached login
+							// Seek `elem` from a previously-cached index
 
 							// ...in a gzip-friendly way
 							node = parent;
@@ -8323,7 +8323,7 @@ Expr = Sizzle.selectors = {
 
 						} else {
 
-							// Use previously-cached element login if available
+							// Use previously-cached element index if available
 							if ( useCache ) {
 
 								// ...in a gzip-friendly way
@@ -8353,7 +8353,7 @@ Expr = Sizzle.selectors = {
 										node.nodeType === 1 ) &&
 										++diff ) {
 
-										// Cache the login of each encountered element
+										// Cache the index of each encountered element
 										if ( useCache ) {
 											outerCache = node[ expando ] ||
 												( node[ expando ] = {} );
@@ -9098,7 +9098,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 						}
 					}
 
-					// Discard login placeholder values to get only actual matches
+					// Discard index placeholder values to get only actual matches
 					setMatched = condense( setMatched );
 				}
 
@@ -9632,7 +9632,7 @@ jQuery.fn.extend( {
 	// Determine the position of an element within the set
 	index: function( elem ) {
 
-		// No argument, return login in parent
+		// No argument, return index in parent
 		if ( !elem ) {
 			return ( this[ 0 ] && this[ 0 ].parentNode ) ? this.first().prevAll().length : -1;
 		}
@@ -10029,7 +10029,7 @@ jQuery.extend( {
 		var tuples = [
 
 				// action, add listener, callbacks,
-				// ... .then handlers, argument login, [final state]
+				// ... .then handlers, argument index, [final state]
 				[ "notify", "progress", jQuery.Callbacks( "memory" ),
 					jQuery.Callbacks( "memory" ), 2 ],
 				[ "resolve", "done", jQuery.Callbacks( "once memory" ),
@@ -13855,7 +13855,7 @@ function propFilter( props, specialEasing ) {
 			delete props[ name ];
 
 			// Not quite $.extend, this won't overwrite existing keys.
-			// Reusing 'login' because we have the correct "name"
+			// Reusing 'index' because we have the correct "name"
 			for ( index in value ) {
 				if ( !( index in props ) ) {
 					props[ index ] = value[ index ];
@@ -15234,7 +15234,7 @@ function buildParams( prefix, obj, traditional, add ) {
 
 			} else {
 
-				// Item is non-scalar (array or object), encode its numeric login.
+				// Item is non-scalar (array or object), encode its numeric index.
 				buildParams(
 					prefix + "[" + ( typeof v === "object" && v != null ? i : "" ) + "]",
 					v,
@@ -17234,7 +17234,7 @@ return jQuery;
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.15';
+  var VERSION = '4.17.19';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -17292,7 +17292,7 @@ return jQuery;
       MAX_INTEGER = 1.7976931348623157e+308,
       NAN = 0 / 0;
 
-  /** Used as references for the maximum length and login of an array. */
+  /** Used as references for the maximum length and index of an array. */
   var MAX_ARRAY_LENGTH = 4294967295,
       MAX_ARRAY_INDEX = MAX_ARRAY_LENGTH - 1,
       HALF_MAX_ARRAY_LENGTH = MAX_ARRAY_LENGTH >>> 1;
@@ -17810,7 +17810,7 @@ return jQuery;
 
   /**
    * A specialized version of `_.includes` for arrays without support for
-   * specifying an login to search from.
+   * specifying an index to search from.
    *
    * @private
    * @param {Array} [array] The array to inspect.
@@ -18012,9 +18012,9 @@ return jQuery;
    * @private
    * @param {Array} array The array to inspect.
    * @param {Function} predicate The function invoked per iteration.
-   * @param {number} fromIndex The login to search from.
+   * @param {number} fromIndex The index to search from.
    * @param {boolean} [fromRight] Specify iterating from right to left.
-   * @returns {number} Returns the login of the matched value, else `-1`.
+   * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function baseFindIndex(array, predicate, fromIndex, fromRight) {
     var length = array.length,
@@ -18034,8 +18034,8 @@ return jQuery;
    * @private
    * @param {Array} array The array to inspect.
    * @param {*} value The value to search for.
-   * @param {number} fromIndex The login to search from.
-   * @returns {number} Returns the login of the matched value, else `-1`.
+   * @param {number} fromIndex The index to search from.
+   * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function baseIndexOf(array, value, fromIndex) {
     return value === value
@@ -18049,9 +18049,9 @@ return jQuery;
    * @private
    * @param {Array} array The array to inspect.
    * @param {*} value The value to search for.
-   * @param {number} fromIndex The login to search from.
+   * @param {number} fromIndex The index to search from.
    * @param {Function} comparator The comparator invoked per element.
-   * @returns {number} Returns the login of the matched value, else `-1`.
+   * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function baseIndexOfWith(array, value, fromIndex, comparator) {
     var index = fromIndex - 1,
@@ -18257,13 +18257,13 @@ return jQuery;
   }
 
   /**
-   * Used by `_.trim` and `_.trimStart` to get the login of the first string symbol
+   * Used by `_.trim` and `_.trimStart` to get the index of the first string symbol
    * that is not found in the character symbols.
    *
    * @private
    * @param {Array} strSymbols The string symbols to inspect.
    * @param {Array} chrSymbols The character symbols to find.
-   * @returns {number} Returns the login of the first unmatched string symbol.
+   * @returns {number} Returns the index of the first unmatched string symbol.
    */
   function charsStartIndex(strSymbols, chrSymbols) {
     var index = -1,
@@ -18274,13 +18274,13 @@ return jQuery;
   }
 
   /**
-   * Used by `_.trim` and `_.trimEnd` to get the login of the last string symbol
+   * Used by `_.trim` and `_.trimEnd` to get the index of the last string symbol
    * that is not found in the character symbols.
    *
    * @private
    * @param {Array} strSymbols The string symbols to inspect.
    * @param {Array} chrSymbols The character symbols to find.
-   * @returns {number} Returns the login of the last unmatched string symbol.
+   * @returns {number} Returns the index of the last unmatched string symbol.
    */
   function charsEndIndex(strSymbols, chrSymbols) {
     var index = strSymbols.length;
@@ -18487,8 +18487,8 @@ return jQuery;
    * @private
    * @param {Array} array The array to inspect.
    * @param {*} value The value to search for.
-   * @param {number} fromIndex The login to search from.
-   * @returns {number} Returns the login of the matched value, else `-1`.
+   * @param {number} fromIndex The index to search from.
+   * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function strictIndexOf(array, value, fromIndex) {
     var index = fromIndex - 1,
@@ -18509,8 +18509,8 @@ return jQuery;
    * @private
    * @param {Array} array The array to inspect.
    * @param {*} value The value to search for.
-   * @param {number} fromIndex The login to search from.
-   * @returns {number} Returns the login of the matched value, else `-1`.
+   * @param {number} fromIndex The index to search from.
+   * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function strictLastIndexOf(array, value, fromIndex) {
     var index = fromIndex + 1;
@@ -19616,11 +19616,11 @@ return jQuery;
             !(skipIndexes && (
                // Safari 9 has enumerable `arguments.length` in strict mode.
                key == 'length' ||
-               // Node.js 0.10 has enumerable non-login properties on buffers.
+               // Node.js 0.10 has enumerable non-index properties on buffers.
                (isBuff && (key == 'offset' || key == 'parent')) ||
-               // PhantomJS 2 has enumerable non-login properties on typed arrays.
+               // PhantomJS 2 has enumerable non-index properties on typed arrays.
                (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||
-               // Skip login properties.
+               // Skip index properties.
                isIndex(key, length)
             ))) {
           result.push(key);
@@ -19699,12 +19699,12 @@ return jQuery;
     }
 
     /**
-     * Gets the login at which the `key` is found in `array` of key-value pairs.
+     * Gets the index at which the `key` is found in `array` of key-value pairs.
      *
      * @private
      * @param {Array} array The array to inspect.
      * @param {*} key The key to search for.
-     * @returns {number} Returns the login of the matched value, else `-1`.
+     * @returns {number} Returns the index of the matched value, else `-1`.
      */
     function assocIndexOf(array, key) {
       var length = array.length;
@@ -20810,7 +20810,7 @@ return jQuery;
      * @private
      * @param {Object} object The destination object.
      * @param {Object} source The source object.
-     * @param {number} srcIndex The login of `source`.
+     * @param {number} srcIndex The index of `source`.
      * @param {Function} [customizer] The function to customize merged values.
      * @param {Object} [stack] Tracks traversed source values and their merged
      *  counterparts.
@@ -20846,7 +20846,7 @@ return jQuery;
      * @param {Object} object The destination object.
      * @param {Object} source The source object.
      * @param {string} key The key of the value to merge.
-     * @param {number} srcIndex The login of `source`.
+     * @param {number} srcIndex The index of `source`.
      * @param {Function} mergeFunc The function to merge values.
      * @param {Function} [customizer] The function to customize assigned values.
      * @param {Object} [stack] Tracks traversed source values and their merged
@@ -20919,7 +20919,7 @@ return jQuery;
      *
      * @private
      * @param {Array} array The array to query.
-     * @param {number} n The login of the element to return.
+     * @param {number} n The index of the element to return.
      * @returns {*} Returns the nth element of `array`.
      */
     function baseNth(array, n) {
@@ -20941,8 +20941,21 @@ return jQuery;
      * @returns {Array} Returns the new sorted array.
      */
     function baseOrderBy(collection, iteratees, orders) {
+      if (iteratees.length) {
+        iteratees = arrayMap(iteratees, function(iteratee) {
+          if (isArray(iteratee)) {
+            return function(value) {
+              return baseGet(value, iteratee.length === 1 ? iteratee[0] : iteratee);
+            }
+          }
+          return iteratee;
+        });
+      } else {
+        iteratees = [identity];
+      }
+
       var index = -1;
-      iteratees = arrayMap(iteratees.length ? iteratees : [identity], baseUnary(getIteratee()));
+      iteratees = arrayMap(iteratees, baseUnary(getIteratee()));
 
       var result = baseMap(collection, function(value, key, collection) {
         var criteria = arrayMap(iteratees, function(iteratee) {
@@ -21199,6 +21212,10 @@ return jQuery;
         var key = toKey(path[index]),
             newValue = value;
 
+        if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
+          return object;
+        }
+
         if (index != lastIndex) {
           var objValue = nested[key];
           newValue = customizer ? customizer(objValue, key, nested) : undefined;
@@ -21306,14 +21323,14 @@ return jQuery;
 
     /**
      * The base implementation of `_.sortedIndex` and `_.sortedLastIndex` which
-     * performs a binary search of `array` to determine the login at which `value`
+     * performs a binary search of `array` to determine the index at which `value`
      * should be inserted into `array` in order to maintain its sort order.
      *
      * @private
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
-     * @param {boolean} [retHighest] Specify returning the highest qualified login.
-     * @returns {number} Returns the login at which `value` should be inserted
+     * @param {boolean} [retHighest] Specify returning the highest qualified index.
+     * @returns {number} Returns the index at which `value` should be inserted
      *  into `array`.
      */
     function baseSortedIndex(array, value, retHighest) {
@@ -21346,16 +21363,19 @@ return jQuery;
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
      * @param {Function} iteratee The iteratee invoked per element.
-     * @param {boolean} [retHighest] Specify returning the highest qualified login.
-     * @returns {number} Returns the login at which `value` should be inserted
+     * @param {boolean} [retHighest] Specify returning the highest qualified index.
+     * @returns {number} Returns the index at which `value` should be inserted
      *  into `array`.
      */
     function baseSortedIndexBy(array, value, iteratee, retHighest) {
-      value = iteratee(value);
-
       var low = 0,
-          high = array == null ? 0 : array.length,
-          valIsNaN = value !== value,
+          high = array == null ? 0 : array.length;
+      if (high === 0) {
+        return 0;
+      }
+
+      value = iteratee(value);
+      var valIsNaN = value !== value,
           valIsNull = value === null,
           valIsSymbol = isSymbol(value),
           valIsUndefined = value === undefined;
@@ -22267,7 +22287,7 @@ return jQuery;
      * Creates a `_.find` or `_.findLast` function.
      *
      * @private
-     * @param {Function} findIndexFunc The function to find the collection login.
+     * @param {Function} findIndexFunc The function to find the collection index.
      * @returns {Function} Returns the new find function.
      */
     function createFind(findIndexFunc) {
@@ -22840,10 +22860,11 @@ return jQuery;
       if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
         return false;
       }
-      // Assume cyclic values are equal.
-      var stacked = stack.get(array);
-      if (stacked && stack.get(other)) {
-        return stacked == other;
+      // Check that cyclic values are equal.
+      var arrStacked = stack.get(array);
+      var othStacked = stack.get(other);
+      if (arrStacked && othStacked) {
+        return arrStacked == other && othStacked == array;
       }
       var index = -1,
           result = true,
@@ -22852,7 +22873,7 @@ return jQuery;
       stack.set(array, other);
       stack.set(other, array);
 
-      // Ignore non-login properties.
+      // Ignore non-index properties.
       while (++index < arrLength) {
         var arrValue = array[index],
             othValue = other[index];
@@ -23005,10 +23026,11 @@ return jQuery;
           return false;
         }
       }
-      // Assume cyclic values are equal.
-      var stacked = stack.get(object);
-      if (stacked && stack.get(other)) {
-        return stacked == other;
+      // Check that cyclic values are equal.
+      var objStacked = stack.get(object);
+      var othStacked = stack.get(other);
+      if (objStacked && othStacked) {
+        return objStacked == other && othStacked == object;
       }
       var result = true;
       stack.set(object, other);
@@ -23472,12 +23494,12 @@ return jQuery;
     }
 
     /**
-     * Checks if `value` is a valid array-like login.
+     * Checks if `value` is a valid array-like index.
      *
      * @private
      * @param {*} value The value to check.
-     * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid login.
-     * @returns {boolean} Returns `true` if `value` is a valid login, else `false`.
+     * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+     * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
      */
     function isIndex(value, length) {
       var type = typeof value;
@@ -23494,7 +23516,7 @@ return jQuery;
      *
      * @private
      * @param {*} value The potential iteratee value argument.
-     * @param {*} index The potential iteratee login or key argument.
+     * @param {*} index The potential iteratee index or key argument.
      * @param {*} object The potential iteratee object argument.
      * @returns {boolean} Returns `true` if the arguments are from an iteratee call,
      *  else `false`.
@@ -23800,8 +23822,8 @@ return jQuery;
 
     /**
      * Reorder `array` according to the specified indexes where the element at
-     * the first login is assigned as the first element, the element at
-     * the second login is assigned as the second element, and so on.
+     * the first index is assigned as the first element, the element at
+     * the second index is assigned as the second element, and so on.
      *
      * @private
      * @param {Array} array The array to reorder.
@@ -24313,7 +24335,7 @@ return jQuery;
     /**
      * Creates a slice of `array` excluding elements dropped from the end.
      * Elements are dropped until `predicate` returns falsey. The predicate is
-     * invoked with three arguments: (value, login, array).
+     * invoked with three arguments: (value, index, array).
      *
      * @static
      * @memberOf _
@@ -24354,7 +24376,7 @@ return jQuery;
     /**
      * Creates a slice of `array` excluding elements dropped from the beginning.
      * Elements are dropped until `predicate` returns falsey. The predicate is
-     * invoked with three arguments: (value, login, array).
+     * invoked with three arguments: (value, index, array).
      *
      * @static
      * @memberOf _
@@ -24434,7 +24456,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.find` except that it returns the login of the first
+     * This method is like `_.find` except that it returns the index of the first
      * element `predicate` returns truthy for instead of the element itself.
      *
      * @static
@@ -24443,8 +24465,8 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=0] The login to search from.
-     * @returns {number} Returns the login of the found element, else `-1`.
+     * @param {number} [fromIndex=0] The index to search from.
+     * @returns {number} Returns the index of the found element, else `-1`.
      * @example
      *
      * var users = [
@@ -24490,8 +24512,8 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=array.length-1] The login to search from.
-     * @returns {number} Returns the login of the found element, else `-1`.
+     * @param {number} [fromIndex=array.length-1] The index to search from.
+     * @returns {number} Returns the index of the found element, else `-1`.
      * @example
      *
      * var users = [
@@ -24647,7 +24669,7 @@ return jQuery;
     }
 
     /**
-     * Gets the login at which the first occurrence of `value` is found in `array`
+     * Gets the index at which the first occurrence of `value` is found in `array`
      * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
      * for equality comparisons. If `fromIndex` is negative, it's used as the
      * offset from the end of `array`.
@@ -24658,8 +24680,8 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {*} value The value to search for.
-     * @param {number} [fromIndex=0] The login to search from.
-     * @returns {number} Returns the login of the matched value, else `-1`.
+     * @param {number} [fromIndex=0] The index to search from.
+     * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
      * _.indexOf([1, 2, 1, 2], 2);
@@ -24843,8 +24865,8 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {*} value The value to search for.
-     * @param {number} [fromIndex=array.length-1] The login to search from.
-     * @returns {number} Returns the login of the matched value, else `-1`.
+     * @param {number} [fromIndex=array.length-1] The index to search from.
+     * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
      * _.lastIndexOf([1, 2, 1, 2], 2);
@@ -24870,7 +24892,7 @@ return jQuery;
     }
 
     /**
-     * Gets the element at login `n` of `array`. If `n` is negative, the nth
+     * Gets the element at index `n` of `array`. If `n` is negative, the nth
      * element from the end is returned.
      *
      * @static
@@ -24878,7 +24900,7 @@ return jQuery;
      * @since 4.11.0
      * @category Array
      * @param {Array} array The array to query.
-     * @param {number} [n=0] The login of the element to return.
+     * @param {number} [n=0] The index of the element to return.
      * @returns {*} Returns the nth element of `array`.
      * @example
      *
@@ -25041,7 +25063,7 @@ return jQuery;
     /**
      * Removes all elements from `array` that `predicate` returns truthy for
      * and returns an array of the removed elements. The predicate is invoked
-     * with three arguments: (value, login, array).
+     * with three arguments: (value, index, array).
      *
      * **Note:** Unlike `_.filter`, this method mutates `array`. Use `_.pull`
      * to pull elements from an array by value.
@@ -25147,7 +25169,7 @@ return jQuery;
     }
 
     /**
-     * Uses a binary search to determine the lowest login at which `value`
+     * Uses a binary search to determine the lowest index at which `value`
      * should be inserted into `array` in order to maintain its sort order.
      *
      * @static
@@ -25156,7 +25178,7 @@ return jQuery;
      * @category Array
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
-     * @returns {number} Returns the login at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be inserted
      *  into `array`.
      * @example
      *
@@ -25179,7 +25201,7 @@ return jQuery;
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
      * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
-     * @returns {number} Returns the login at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be inserted
      *  into `array`.
      * @example
      *
@@ -25206,7 +25228,7 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {*} value The value to search for.
-     * @returns {number} Returns the login of the matched value, else `-1`.
+     * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
      * _.sortedIndexOf([4, 5, 5, 5, 6], 5);
@@ -25225,7 +25247,7 @@ return jQuery;
 
     /**
      * This method is like `_.sortedIndex` except that it returns the highest
-     * login at which `value` should be inserted into `array` in order to
+     * index at which `value` should be inserted into `array` in order to
      * maintain its sort order.
      *
      * @static
@@ -25234,7 +25256,7 @@ return jQuery;
      * @category Array
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
-     * @returns {number} Returns the login at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be inserted
      *  into `array`.
      * @example
      *
@@ -25257,7 +25279,7 @@ return jQuery;
      * @param {Array} array The sorted array to inspect.
      * @param {*} value The value to evaluate.
      * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
-     * @returns {number} Returns the login at which `value` should be inserted
+     * @returns {number} Returns the index at which `value` should be inserted
      *  into `array`.
      * @example
      *
@@ -25284,7 +25306,7 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {*} value The value to search for.
-     * @returns {number} Returns the login of the matched value, else `-1`.
+     * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
      * _.sortedLastIndexOf([4, 5, 5, 5, 6], 5);
@@ -25434,7 +25456,7 @@ return jQuery;
     /**
      * Creates a slice of `array` with elements taken from the end. Elements are
      * taken until `predicate` returns falsey. The predicate is invoked with
-     * three arguments: (value, login, array).
+     * three arguments: (value, index, array).
      *
      * @static
      * @memberOf _
@@ -25475,7 +25497,7 @@ return jQuery;
     /**
      * Creates a slice of `array` with elements taken from the beginning. Elements
      * are taken until `predicate` returns falsey. The predicate is invoked with
-     * three arguments: (value, login, array).
+     * three arguments: (value, index, array).
      *
      * @static
      * @memberOf _
@@ -26307,7 +26329,7 @@ return jQuery;
     /**
      * Checks if `predicate` returns truthy for **all** elements of `collection`.
      * Iteration is stopped once `predicate` returns falsey. The predicate is
-     * invoked with three arguments: (value, login|key, collection).
+     * invoked with three arguments: (value, index|key, collection).
      *
      * **Note:** This method returns `true` for
      * [empty collections](https://en.wikipedia.org/wiki/Empty_set) because
@@ -26356,7 +26378,7 @@ return jQuery;
     /**
      * Iterates over elements of `collection`, returning an array of all elements
      * `predicate` returns truthy for. The predicate is invoked with three
-     * arguments: (value, login|key, collection).
+     * arguments: (value, index|key, collection).
      *
      * **Note:** Unlike `_.remove`, this method returns a new array.
      *
@@ -26389,6 +26411,10 @@ return jQuery;
      * // The `_.property` iteratee shorthand.
      * _.filter(users, 'active');
      * // => objects for ['barney']
+     *
+     * // Combining several predicates using `_.overEvery` or `_.overSome`.
+     * _.filter(users, _.overSome([{ 'age': 36 }, ['age', 40]]));
+     * // => objects for ['fred', 'barney']
      */
     function filter(collection, predicate) {
       var func = isArray(collection) ? arrayFilter : baseFilter;
@@ -26398,7 +26424,7 @@ return jQuery;
     /**
      * Iterates over elements of `collection`, returning the first element
      * `predicate` returns truthy for. The predicate is invoked with three
-     * arguments: (value, login|key, collection).
+     * arguments: (value, index|key, collection).
      *
      * @static
      * @memberOf _
@@ -26406,7 +26432,7 @@ return jQuery;
      * @category Collection
      * @param {Array|Object} collection The collection to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=0] The login to search from.
+     * @param {number} [fromIndex=0] The index to search from.
      * @returns {*} Returns the matched element, else `undefined`.
      * @example
      *
@@ -26443,7 +26469,7 @@ return jQuery;
      * @category Collection
      * @param {Array|Object} collection The collection to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=collection.length-1] The login to search from.
+     * @param {number} [fromIndex=collection.length-1] The index to search from.
      * @returns {*} Returns the matched element, else `undefined`.
      * @example
      *
@@ -26457,7 +26483,7 @@ return jQuery;
     /**
      * Creates a flattened array of values by running each element in `collection`
      * thru `iteratee` and flattening the mapped results. The iteratee is invoked
-     * with three arguments: (value, login|key, collection).
+     * with three arguments: (value, index|key, collection).
      *
      * @static
      * @memberOf _
@@ -26531,7 +26557,7 @@ return jQuery;
 
     /**
      * Iterates over elements of `collection` and invokes `iteratee` for each element.
-     * The iteratee is invoked with three arguments: (value, login|key, collection).
+     * The iteratee is invoked with three arguments: (value, index|key, collection).
      * Iteratee functions may exit iteration early by explicitly returning `false`.
      *
      * **Note:** As with other "Collections" methods, objects with a "length"
@@ -26633,7 +26659,7 @@ return jQuery;
      * @category Collection
      * @param {Array|Object|string} collection The collection to inspect.
      * @param {*} value The value to search for.
-     * @param {number} [fromIndex=0] The login to search from.
+     * @param {number} [fromIndex=0] The index to search from.
      * @param- {Object} [guard] Enables use as an iteratee for methods like `_.reduce`.
      * @returns {boolean} Returns `true` if `value` is found, else `false`.
      * @example
@@ -26732,7 +26758,7 @@ return jQuery;
     /**
      * Creates an array of values by running each element in `collection` thru
      * `iteratee`. The iteratee is invoked with three arguments:
-     * (value, login|key, collection).
+     * (value, index|key, collection).
      *
      * Many lodash methods are guarded to work as iteratees for methods like
      * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
@@ -26865,7 +26891,7 @@ return jQuery;
      * invocation is supplied the return value of the previous. If `accumulator`
      * is not given, the first element of `collection` is used as the initial
      * value. The iteratee is invoked with four arguments:
-     * (accumulator, value, login|key, collection).
+     * (accumulator, value, index|key, collection).
      *
      * Many lodash methods are guarded to work as iteratees for methods like
      * `_.reduce`, `_.reduceRight`, and `_.transform`.
@@ -27078,7 +27104,7 @@ return jQuery;
     /**
      * Checks if `predicate` returns truthy for **any** element of `collection`.
      * Iteration is stopped once `predicate` returns truthy. The predicate is
-     * invoked with three arguments: (value, login|key, collection).
+     * invoked with three arguments: (value, index|key, collection).
      *
      * @static
      * @memberOf _
@@ -27138,15 +27164,15 @@ return jQuery;
      * var users = [
      *   { 'user': 'fred',   'age': 48 },
      *   { 'user': 'barney', 'age': 36 },
-     *   { 'user': 'fred',   'age': 40 },
+     *   { 'user': 'fred',   'age': 30 },
      *   { 'user': 'barney', 'age': 34 }
      * ];
      *
      * _.sortBy(users, [function(o) { return o.user; }]);
-     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
+     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 30]]
      *
      * _.sortBy(users, ['user', 'age']);
-     * // => objects for [['barney', 34], ['barney', 36], ['fred', 40], ['fred', 48]]
+     * // => objects for [['barney', 34], ['barney', 36], ['fred', 30], ['fred', 48]]
      */
     var sortBy = baseRest(function(collection, iteratees) {
       if (collection == null) {
@@ -27965,8 +27991,8 @@ return jQuery;
 
     /**
      * Creates a function that invokes `func` with arguments arranged according
-     * to the specified `indexes` where the argument value at the first login is
-     * provided as the first argument, the argument value at the second login is
+     * to the specified `indexes` where the argument value at the first index is
+     * provided as the first argument, the argument value at the second index is
      * provided as the second argument, and so on.
      *
      * @static
@@ -28256,7 +28282,7 @@ return jQuery;
      * This method is like `_.clone` except that it accepts `customizer` which
      * is invoked to produce the cloned value. If `customizer` returns `undefined`,
      * cloning is handled by the method instead. The `customizer` is invoked with
-     * up to four arguments; (value [, login|key, object, stack]).
+     * up to four arguments; (value [, index|key, object, stack]).
      *
      * @static
      * @memberOf _
@@ -28758,7 +28784,7 @@ return jQuery;
      * This method is like `_.isEqual` except that it accepts `customizer` which
      * is invoked to compare values. If `customizer` returns `undefined`, comparisons
      * are handled by the method instead. The `customizer` is invoked with up to
-     * six arguments: (objValue, othValue [, login|key, object, other, stack]).
+     * six arguments: (objValue, othValue [, index|key, object, other, stack]).
      *
      * @static
      * @memberOf _
@@ -29050,7 +29076,7 @@ return jQuery;
      * This method is like `_.isMatch` except that it accepts `customizer` which
      * is invoked to compare values. If `customizer` returns `undefined`, comparisons
      * are handled by the method instead. The `customizer` is invoked with five
-     * arguments: (objValue, srcValue, login|key, object, source).
+     * arguments: (objValue, srcValue, index|key, object, source).
      *
      * @static
      * @memberOf _
@@ -30866,7 +30892,7 @@ return jQuery;
 
     /**
      * Sets the value at `path` of `object`. If a portion of `path` doesn't exist,
-     * it's created. Arrays are created for missing login properties while objects
+     * it's created. Arrays are created for missing index properties while objects
      * are created for all other missing properties. Use `_.setWith` to customize
      * `path` creation.
      *
@@ -32021,11 +32047,11 @@ return jQuery;
 
       // Use a sourceURL for easier debugging.
       // The sourceURL gets injected into the source that's eval-ed, so be careful
-      // with lookup (in case of e.g. prototype pollution), and strip newlines if any.
-      // A newline wouldn't be a valid sourceURL anyway, and it'd enable code injection.
+      // to normalize all kinds of whitespace, so e.g. newlines (and unicode versions of it) can't sneak in
+      // and escape the comment, thus injecting code that gets evaled.
       var sourceURL = '//# sourceURL=' +
         (hasOwnProperty.call(options, 'sourceURL')
-          ? (options.sourceURL + '').replace(/[\r\n]/g, ' ')
+          ? (options.sourceURL + '').replace(/\s/g, ' ')
           : ('lodash.templateSources[' + (++templateCounter) + ']')
         ) + '\n';
 
@@ -32058,8 +32084,6 @@ return jQuery;
 
       // If `variable` is not specified wrap a with-statement around the generated
       // code to add the data object to the top of the scope chain.
-      // Like with sourceURL, we take care to not check the option's prototype,
-      // as this configuration is a code injection vector.
       var variable = hasOwnProperty.call(options, 'variable') && options.variable;
       if (!variable) {
         source = 'with (obj) {\n' + source + '\n}\n';
@@ -32766,6 +32790,9 @@ return jQuery;
      * values against any array or object value, respectively. See `_.isEqual`
      * for a list of supported value comparisons.
      *
+     * **Note:** Multiple values can be checked by combining several matchers
+     * using `_.overSome`
+     *
      * @static
      * @memberOf _
      * @since 3.0.0
@@ -32781,6 +32808,10 @@ return jQuery;
      *
      * _.filter(objects, _.matches({ 'a': 4, 'c': 6 }));
      * // => [{ 'a': 4, 'b': 5, 'c': 6 }]
+     *
+     * // Checking for several possible values
+     * _.filter(users, _.overSome([_.matches({ 'a': 1 }), _.matches({ 'a': 4 })]));
+     * // => [{ 'a': 1, 'b': 2, 'c': 3 }, { 'a': 4, 'b': 5, 'c': 6 }]
      */
     function matches(source) {
       return baseMatches(baseClone(source, CLONE_DEEP_FLAG));
@@ -32794,6 +32825,9 @@ return jQuery;
      * **Note:** Partial comparisons will match empty array and empty object
      * `srcValue` values against any array or object value, respectively. See
      * `_.isEqual` for a list of supported value comparisons.
+     *
+     * **Note:** Multiple values can be checked by combining several matchers
+     * using `_.overSome`
      *
      * @static
      * @memberOf _
@@ -32811,6 +32845,10 @@ return jQuery;
      *
      * _.find(objects, _.matchesProperty('a', 4));
      * // => { 'a': 4, 'b': 5, 'c': 6 }
+     *
+     * // Checking for several possible values
+     * _.filter(users, _.overSome([_.matchesProperty('a', 1), _.matchesProperty('a', 4)]));
+     * // => [{ 'a': 1, 'b': 2, 'c': 3 }, { 'a': 4, 'b': 5, 'c': 6 }]
      */
     function matchesProperty(path, srcValue) {
       return baseMatchesProperty(path, baseClone(srcValue, CLONE_DEEP_FLAG));
@@ -32984,14 +33022,14 @@ return jQuery;
     }
 
     /**
-     * Creates a function that gets the argument at login `n`. If `n` is negative,
+     * Creates a function that gets the argument at index `n`. If `n` is negative,
      * the nth argument from the end is returned.
      *
      * @static
      * @memberOf _
      * @since 4.0.0
      * @category Util
-     * @param {number} [n=0] The login of the argument to return.
+     * @param {number} [n=0] The index of the argument to return.
      * @returns {Function} Returns the new pass-thru function.
      * @example
      *
@@ -33034,6 +33072,10 @@ return jQuery;
      * Creates a function that checks if **all** of the `predicates` return
      * truthy when invoked with the arguments it receives.
      *
+     * Following shorthands are possible for providing predicates.
+     * Pass an `Object` and it will be used as an parameter for `_.matches` to create the predicate.
+     * Pass an `Array` of parameters for `_.matchesProperty` and the predicate will be created using them.
+     *
      * @static
      * @memberOf _
      * @since 4.0.0
@@ -33060,6 +33102,10 @@ return jQuery;
      * Creates a function that checks if **any** of the `predicates` return
      * truthy when invoked with the arguments it receives.
      *
+     * Following shorthands are possible for providing predicates.
+     * Pass an `Object` and it will be used as an parameter for `_.matches` to create the predicate.
+     * Pass an `Array` of parameters for `_.matchesProperty` and the predicate will be created using them.
+     *
      * @static
      * @memberOf _
      * @since 4.0.0
@@ -33079,6 +33125,9 @@ return jQuery;
      *
      * func(NaN);
      * // => false
+     *
+     * var matchesFunc = _.overSome([{ 'a': 1 }, { 'a': 2 }])
+     * var matchesPropertyFunc = _.overSome([['a', 1], ['a', 2]])
      */
     var overSome = createOver(arraySome);
 
@@ -33313,7 +33362,7 @@ return jQuery;
 
     /**
      * Invokes the iteratee `n` times, returning an array of the results of
-     * each invocation. The iteratee is invoked with one argument; (login).
+     * each invocation. The iteratee is invoked with one argument; (index).
      *
      * @static
      * @since 0.1.0
@@ -34331,7 +34380,7 @@ return jQuery;
 
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
-  !*** ./node_modules/object-assign/login.js ***!
+  !*** ./node_modules/object-assign/index.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -35290,7 +35339,7 @@ function find(arr, check) {
 }
 
 /**
- * Return the login of the matching object
+ * Return the index of the matching object
  * @method
  * @memberof Popper.Utils
  * @argument {Array} arr
@@ -36187,7 +36236,7 @@ function toValue(str, measurement, popperOffsets, referenceOffsets) {
 function parseOffset(offset, popperOffsets, referenceOffsets, basePlacement) {
   var offsets = [0, 0];
 
-  // Use height if placement is left or right and login is 0 otherwise use width
+  // Use height if placement is left or right and index is 0 otherwise use width
   // in this way the first offset will use an axis and the second one
   // will use the other one
   var useHeight = ['right', 'left'].indexOf(basePlacement) !== -1;
@@ -38766,7 +38815,7 @@ function describeComponentFrame (name, source, ownerName) {
 
     {
       // In DEV, include code for a common special case:
-      // prefer "folder/login.js" instead of just "login.js".
+      // prefer "folder/index.js" instead of just "index.js".
       if (/^index\./.test(fileName)) {
         var match = path.match(BEFORE_SLASH_RE);
 
@@ -44157,9 +44206,9 @@ function getOffsets(outerNode) {
   return getModernOffsetsFromPoints(outerNode, anchorNode, anchorOffset, focusNode, focusOffset);
 }
 /**
- * Returns {start, end} where `start` is the character/codepoint login of
+ * Returns {start, end} where `start` is the character/codepoint index of
  * (anchorNode, anchorOffset) within the textContent of `outerNode`, and
- * `end` is the login of (focusNode, focusOffset).
+ * `end` is the index of (focusNode, focusOffset).
  *
  * Returns null if you pass in garbage input but we should probably just crash.
  *
@@ -50883,7 +50932,7 @@ function ChildReconciler(shouldTrackSideEffects) {
 
   function mapRemainingChildren(returnFiber, currentFirstChild) {
     // Add the remaining children to a temporary map so that we can find them by
-    // keys quickly. Implicit (null) keys get added to this set with their login
+    // keys quickly. Implicit (null) keys get added to this set with their index
     // instead.
     var existingChildren = new Map();
     var existingChild = currentFirstChild;
@@ -50902,7 +50951,7 @@ function ChildReconciler(shouldTrackSideEffects) {
   }
 
   function useFiber(fiber, pendingProps) {
-    // We currently set sibling to null and login to 0 here because it is easy
+    // We currently set sibling to null and index to 0 here because it is easy
     // to forget to do before returning it. E.g. for the single child case.
     var clone = createWorkInProgress(fiber, pendingProps);
     clone.index = 0;
@@ -50966,7 +51015,7 @@ function ChildReconciler(shouldTrackSideEffects) {
     if (current !== null) {
       if (current.elementType === element.type || ( // Keep this check inline so it only runs on the false path:
        isCompatibleFamilyForHotReloading(current, element) )) {
-        // Move based on login
+        // Move based on index
         var existing = useFiber(current, element.props);
         existing.ref = coerceRef(returnFiber, current, element);
         existing.return = returnFiber;
@@ -51280,7 +51329,7 @@ function ChildReconciler(shouldTrackSideEffects) {
         // TODO: Move out of the loop. This only happens for the first run.
         resultingFirstChild = newFiber;
       } else {
-        // TODO: Defer siblings if we're not at the right login for this slot.
+        // TODO: Defer siblings if we're not at the right index for this slot.
         // I.e. if we had null values before, then we want to defer this
         // for each null value. However, we also don't want to call updateSlot
         // with the previous one.
@@ -51462,7 +51511,7 @@ function ChildReconciler(shouldTrackSideEffects) {
         // TODO: Move out of the loop. This only happens for the first run.
         resultingFirstChild = newFiber;
       } else {
-        // TODO: Defer siblings if we're not at the right login for this slot.
+        // TODO: Defer siblings if we're not at the right index for this slot.
         // I.e. if we had null values before, then we want to defer this
         // for each null value. However, we also don't want to call updateSlot
         // with the previous one.
@@ -61193,7 +61242,7 @@ function resetWorkInProgress(workInProgress, renderExpirationTime) {
   // have set the values to before during the first pass. Ideally this wouldn't
   // be necessary but unfortunately many code paths reads from the workInProgress
   // when they should be reading from current and writing to workInProgress.
-  // We assume pendingProps, login, key, ref, return are still untouched to
+  // We assume pendingProps, index, key, ref, return are still untouched to
   // avoid doing another reconciliation.
   // Reset the effect tag but keep any Placement tags, since that's something
   // that child fiber is setting, not the reconciliation.
@@ -61895,7 +61944,7 @@ var setSuspenseHandler = null;
 
 
   overrideHookState = function (fiber, id, path, value) {
-    // For now, the "id" of stateful hooks is just the stateful hook login.
+    // For now, the "id" of stateful hooks is just the stateful hook index.
     // This may change in the future with e.g. nested hooks.
     var currentHook = fiber.memoizedState;
 
@@ -61972,7 +62021,7 @@ function injectIntoDevTools(devToolsConfig) {
     // Enables DevTools to append owner stacks to error messages in DEV mode.
     getCurrentFiber:  function () {
       return current;
-    }
+    } 
   }));
 }
 var IsSomeRendererActing$1 = ReactSharedInternals.IsSomeRendererActing;
@@ -62420,7 +62469,7 @@ exports.version = ReactVersion;
 
 /***/ "./node_modules/react-dom/index.js":
 /*!*****************************************!*\
-  !*** ./node_modules/react-dom/login.js ***!
+  !*** ./node_modules/react-dom/index.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -62572,7 +62621,7 @@ function describeComponentFrame (name, source, ownerName) {
 
     {
       // In DEV, include code for a common special case:
-      // prefer "folder/login.js" instead of just "login.js".
+      // prefer "folder/index.js" instead of just "index.js".
       if (/^index\./.test(fileName)) {
         var match = path.match(BEFORE_SLASH_RE);
 
@@ -63579,7 +63628,7 @@ function getComponentKey(component, index) {
   if (typeof component === 'object' && component !== null && component.key != null) {
     // Explicit key
     return escape(component.key);
-  } // Implicit key determined by the login in the set
+  } // Implicit key determined by the index in the set
 
 
   return index.toString(36);
@@ -63595,7 +63644,7 @@ function forEachSingleChild(bookKeeping, child, name) {
  *
  * See https://reactjs.org/docs/react-api.html#reactchildrenforeach
  *
- * The provided forEachFunc(child, login) will be called for each
+ * The provided forEachFunc(child, index) will be called for each
  * leaf child.
  *
  * @param {?*} children Children tree container.
@@ -63652,7 +63701,7 @@ function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
  *
  * See https://reactjs.org/docs/react-api.html#reactchildrenmap
  *
- * The provided mapFunction(child, key, login) will be called for each
+ * The provided mapFunction(child, key, index) will be called for each
  * leaf child.
  *
  * @param {?*} children Children tree container.
@@ -64389,7 +64438,7 @@ exports.version = ReactVersion;
 
 /***/ "./node_modules/react/index.js":
 /*!*************************************!*\
-  !*** ./node_modules/react/login.js ***!
+  !*** ./node_modules/react/index.js ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -65060,7 +65109,7 @@ function siftDown(heap, node, i) {
 }
 
 function compare(a, b) {
-  // Compare sort login first, then task id.
+  // Compare sort index first, then task id.
   var diff = a.sortIndex - b.sortIndex;
   return diff !== 0 ? diff : a.id - b.id;
 }
@@ -65637,7 +65686,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
 
 /***/ "./node_modules/scheduler/index.js":
 /*!*****************************************!*\
-  !*** ./node_modules/scheduler/login.js ***!
+  !*** ./node_modules/scheduler/index.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
