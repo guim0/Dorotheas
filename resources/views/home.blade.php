@@ -43,7 +43,7 @@
             </div>
 
             <div class="mysite_home-card-teachers d-flex">
-                <a href="">
+                <a href="/students">
                     <div class="mysite_home-img d-flex align-items-center justify-content-center">
                         <img src="{!! asset('images/HomePage/student.png') !!}" alt="">
                     </div>
