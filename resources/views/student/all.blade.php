@@ -1,9 +1,159 @@
-@extends('layouts.student')
+@extends('layouts.main')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <h1>Welcome to Students page</h1>
+    <div class="mysite_students container-fluid d-flex justify-content-center flex-wrap">
+
+        <div class="mysite_students-card d-flex mr-5 mt-5">
+            <div class="mysite_students-image d-flex align-items-center justify-content-center ">
+                <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
+            </div>
+            <div class="mysite_students-content m-3">
+                <div class="mysite_students-name">
+                    <h1>My name</h1>
+                </div>
+                <div class="mysite_students-info">
+                    <h2>Idade</h2>
+                    <p>. 15 anos</p>
+                    <h2>Responsável</h2>
+                    <p>. João Pedro</p>
+                    <h2>Observação</h2>
+                    <p>. Tem alergia a dipirona</p>
+                </div>
+            </div>
         </div>
+
+        <div class="mysite_students-card d-flex mr-5 mt-5">
+            <div class="mysite_students-image d-flex align-items-center justify-content-center ">
+                <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
+            </div>
+            <div class="mysite_students-content m-3">
+                <div class="mysite_students-name">
+                    <h1>My name</h1>
+                </div>
+                <div class="mysite_students-info">
+                    <h2>Idade</h2>
+                    <p>. 15 anos</p>
+                    <h2>Responsável</h2>
+                    <p>. João Pedro</p>
+                    <h2>Observação</h2>
+                    <p>. Tem alergia a dipirona</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mysite_students-card d-flex mr-5 mt-5">
+            <div class="mysite_students-image d-flex align-items-center justify-content-center ">
+                <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
+            </div>
+            <div class="mysite_students-content m-3">
+                <div class="mysite_students-name">
+                    <h1>My name</h1>
+                </div>
+                <div class="mysite_students-info">
+                    <h2>Idade</h2>
+                    <p>. 15 anos</p>
+                    <h2>Responsável</h2>
+                    <p>. João Pedro</p>
+                    <h2>Observação</h2>
+                    <p>. Tem alergia a dipirona</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mysite_students-card d-flex mr-5 mt-5">
+            <div class="mysite_students-image d-flex align-items-center justify-content-center ">
+                <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
+            </div>
+            <div class="mysite_students-content m-3">
+                <div class="mysite_students-name">
+                    <h1>My name</h1>
+                </div>
+                <div class="mysite_students-info">
+                    <h2>Idade</h2>
+                    <p>. 15 anos</p>
+                    <h2>Responsável</h2>
+                    <p>. João Pedro</p>
+                    <h2>Observação</h2>
+                    <p>. Tem alergia a dipirona</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mysite_students-card d-flex mr-5 mt-5">
+            <div class="mysite_students-image d-flex align-items-center justify-content-center ">
+                <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
+            </div>
+            <div class="mysite_students-content m-3">
+                <div class="mysite_students-name">
+                    <h1>My name</h1>
+                </div>
+                <div class="mysite_students-info">
+                    <h2>Idade</h2>
+                    <p>. 15 anos</p>
+                    <h2>Responsável</h2>
+                    <p>. João Pedro</p>
+                    <h2>Observação</h2>
+                    <p>. Tem alergia a dipirona</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mysite_students-card d-flex mr-5 mt-5">
+            <div class="mysite_students-image d-flex align-items-center justify-content-center ">
+                <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
+            </div>
+            <div class="mysite_students-content m-3">
+                <div class="mysite_students-name">
+                    <h1>My name</h1>
+                </div>
+                <div class="mysite_students-info">
+                    <h2>Idade</h2>
+                    <p>. 15 anos</p>
+                    <h2>Responsável</h2>
+                    <p>. João Pedro</p>
+                    <h2>Observação</h2>
+                    <p>. Tem alergia a dipirona</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mysite_students-card d-flex mr-5 mt-5">
+            <div class="mysite_students-image d-flex align-items-center justify-content-center ">
+                <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
+            </div>
+            <div class="mysite_students-content m-3">
+                <div class="mysite_students-name">
+                    <h1>My name</h1>
+                </div>
+                <div class="mysite_students-info">
+                    <h2>Idade</h2>
+                    <p>. 15 anos</p>
+                    <h2>Responsável</h2>
+                    <p>. João Pedro</p>
+                    <h2>Observação</h2>
+                    <p>. Tem alergia a dipirona</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mysite_students-card d-flex mr-5 mt-5">
+            <div class="mysite_students-image d-flex align-items-center justify-content-center ">
+                <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
+            </div>
+            <div class="mysite_students-content m-3">
+                <div class="mysite_students-name">
+                    <h1>My name</h1>
+                </div>
+                <div class="mysite_students-info">
+                    <h2>Idade</h2>
+                    <p>. 15 anos</p>
+                    <h2>Responsável</h2>
+                    <p>. João Pedro</p>
+                    <h2>Observação</h2>
+                    <p>. Tem alergia a dipirona</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 @endsection

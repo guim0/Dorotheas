@@ -11045,6 +11045,21 @@ body {
   padding: 0;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
 .mysite_home {
   height: 100%;
   background-image: linear-gradient(180deg, #1A1830 70%, #c8c8c8 50%);
@@ -11117,5 +11132,64 @@ body {
   font-family: "Fredoka One", cursive;
   margin: 0 0 0 1rem;
   max-width: 10vw;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.mysite_students {
+  height: 100%;
+  background-image: linear-gradient(90deg, #c8c8c8 50%, #1A1830 50%);
+}
+
+.mysite_students .mysite_students-card {
+  width: 40vw;
+  margin: 0 0 0 5rem;
+}
+
+.mysite_students .mysite_students-card .mysite_students-image {
+  width: 15vw;
+  height: 23vh;
+  background: #2D27FF;
+  border-radius: 20px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.mysite_students .mysite_students-card .mysite_students-image img {
+  width: 10vw;
+  height: 18vh;
+}
+
+.mysite_students .mysite_students-card .mysite_students-content {
+  color: #fff;
+  font-family: "Fredoka One", cursive;
+}
+
+.mysite_students .mysite_students-card .mysite_students-content .mysite_students-info {
+  margin: 0 0 0 1.3rem;
+}
+
+.mysite_students .mysite_students-card .mysite_students-content .mysite_students-info h2,
+.mysite_students .mysite_students-card .mysite_students-content .mysite_students-info p {
+  margin: 0;
+}
+
+.mysite_students .mysite_students-card .mysite_students-content .mysite_students-info p {
+  font-size: 1.3em;
 }
 
