@@ -2,25 +2,27 @@
 
 @section('content')
     <div class="mysite_students container-fluid d-flex justify-content-center flex-wrap">
-        @for($i = 0; $i < 5; $i++)
-            <div class="mysite_students-card d-flex mr-5 mt-5">
-                <div class="mysite_students-image d-flex align-items-center justify-content-center ">
-                    <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
-                </div>
-                <div class="mysite_students-content m-3">
-                    <div class="mysite_students-name">
-                        <h1>My name</h1>
-                    </div>
-                    <div class="mysite_students-info">
-                        <h2>Idade</h2>
-                        <p>. 15 anos</p>
-                        <h2>Responsável</h2>
-                        <p>. João Pedro</p>
-                        <h2>Observação</h2>
-                        <p>. Tem alergia a dipirona</p>
-                    </div>
-                </div>
+        <nav class="mysite_students-menu d-flex flex-column justify-content-center align-items-center">
+            <h1>Welcome to Dorotheas</h1>
+            <div class="mysite_students-menu-btn d-flex justify-content-around">
+                <button>
+                    <img src="{!! asset('images/StudentsPage/adicionar.png') !!}" alt="">
+                </button>
+                <button>
+                    <img src="{!! asset('images/StudentsPage/menu-aberto.png') !!}" alt="">
+                </button>
             </div>
-        @endfor
+        </nav>
+        <div class="spacing container-fluid d-flex justify-content-start flex-wrap">
+            @for($i = 0; $i < 5; $i++)
+                <div class="mysite_students-card m-5 d-flex flex-column align-items-center justify-content-center">
+                    <h1>Course</h1>
+                    <img src="{!! asset('images/StudentsPage/student.png') !!}" alt="">
+                    <h3 class="d-flex align-self-start mt-3 ml-5">Hello,</h3>
+                    <p class="d-flex align-self-start ml-5">i'am name name name name name</p>
+                    <button>About</button>
+                </div>
+            @endfor
+        </div>
     </div>
 @endsection
