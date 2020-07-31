@@ -10937,14 +10937,14 @@ body {
 }
 
 .mysite_main {
-  height: 100%;
-  background-image: linear-gradient(90deg, #2c27c3 50%, #c8c8c8 50%);
+  height: 100vh;
+  background-image: linear-gradient(90deg, #1A1830 50%, #3E3B60 50%);
 }
 
 .mysite_main .mysite_main-card-main {
   height: 70vh;
   width: 80vw;
-  background: linear-gradient(90deg, #3a36c3 50%, #ABAAAA 50%);
+  background: linear-gradient(90deg, #3E3B60 50%, #1A1830 50%);
   box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
@@ -11028,7 +11028,7 @@ body {
 
 .mysite_main .mysite_main-card-main .mysite_main-card-right .mysite_main-form-login form .mysite_main-btn {
   border: none;
-  background: #2D27FF;
+  background: #3E3B60;
   padding: 0.2em 2em;
   margin: 1em 0 0 0;
   border-radius: 10px;
