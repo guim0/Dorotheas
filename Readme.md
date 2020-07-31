@@ -1,8 +1,7 @@
-![Dorotheas logo](public/images/logo.png)
+### O que é?
+# Dorotheas
+is a system created to facilitate service
+community center, it also serves for data communication and analysis
+of each student and teacher, here is a beautiful example of a formidable CRUD!
 
-## **O que é?** 
-O **dorotheas** é um sistema criado para facilitar o atendimento 
-de um centro comunitário aos insteressados, é um sistema onde 
-temos a relação aluno professor!
-
-## `Ainda estamos em produção` 
+:fire: "We are still in production"
