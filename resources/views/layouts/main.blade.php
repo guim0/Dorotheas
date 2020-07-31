@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="fadeIn">
+<body>
 <main class="m-0">
     @yield('content')
 </main>
